@@ -42,6 +42,12 @@ var init = function() {
 
   client = new Las2peerWidgetLibrary("$Microservice_Url$/res", iwcCallback, '*');
 
+  $('#button_97957').on('click', function() {
+    //start parameter initiation
+
+    //end parameter initiation
+    buttonClick();
+  })
 
 
 };
@@ -50,6 +56,26 @@ var initClient = function(y) {
   this.client = new Las2peerWidgetLibrary("", iwcCallback, "127.0.0.1:8073", y);
   console.log("Client initialized");
 };
+
+// buttonClick
+var buttonClick = function(){
+
+//start variable declaration
+   var test = null;
+
+//end variable declaration
+
+  client.sendRequest("GET", todo, "", "", {}, false,
+  function(data, type) {
+    console.log(data);
+  },
+  function(error) {
+    console.log(error);
+  });
+
+  //Additional own javascript
+ return test;
+}
 
 
 $(document).ready(function() {
