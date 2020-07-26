@@ -65,7 +65,7 @@ var buttonClick = function(){
 
 //end variable declaration
 
-  client.sendRequest("GET", todo, "", "", {}, false,
+  client.sendRequest("GET", "todo", "", "", {}, false,
   function(data, type) {
     console.log(data);
   },
